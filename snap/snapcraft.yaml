@@ -1,4 +1,4 @@
-name: dehasher
+name: hasher
 version: '1.1'
 summary: This program dehashes my algorithm.
 description: I had nothing to do so I created this program.
@@ -7,15 +7,15 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 base: core18
 
 apps:
-    dehasher:
-        command: python3 $SNAP/dehash.py
+    hasher:
+        command: python3 $SNAP/hasher.py
         plugs: [home, gsettings, network]
 
 parts:
   copy-stuff:
     plugin: dump
     source: .
-  dehasher:
+  hasher:
     plugin: python
     python-version: python3
     source: .
