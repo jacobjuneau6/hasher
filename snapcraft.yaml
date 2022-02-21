@@ -1,0 +1,35 @@
+name: dehasher
+version: '1.1'
+summary: This program dehashes my algorithm.
+description: I had nothing to do so I created this program.
+grade: stable # devel # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+base: core18
+
+apps:
+    dehasher:
+        command: python3 $SNAP/dehash.py
+        plugs: [home, gsettings, network]
+
+parts:
+  copy-stuff:
+    plugin: dump
+    source: .
+  dehasher:
+    plugin: python
+    python-version: python3
+    source: .
+    stage-packages:
+        - libssl-dev
+        - libjpeg-dev
+        - libtiff-dev
+        - libsdl1.2-dev
+        - libnotify-dev
+        - freeglut3
+        - ibus-gtk3
+        - libwebkitgtk-3.0-0
+        - zlib1g
+        - libsm6
+        - libpulse0
+        - libslang2
+        - libsdl1.2debian
