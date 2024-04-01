@@ -1,4 +1,4 @@
-val = input("Enter your what you wnat to be hashed : ")
+val = input("Enter your what you want to be hashed : ")
 val = val.replace('a' ,'@#$')
 val = val.replace('b' ,'+_*')
 val = val.replace('c' ,'$_^')
