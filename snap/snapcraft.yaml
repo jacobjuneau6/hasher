@@ -1,6 +1,6 @@
 name: hasher
 version: '1.2'
-summary: This program hashes text that you type whith my algorithm.
+summary: This program hashes text that you type with my algorithm.
 description: I had nothing to do so I created this program. To dehash use dehasher. To run type "hasher" in the terminal.
 grade: stable # devel # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
